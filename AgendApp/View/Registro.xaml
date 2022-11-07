@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:viewmodel="clr-namespace:AgendApp.ViewModel" x:DataType="viewmodel:RegistroViewModel"
+             x:Class="AgendApp.Views.Registro">
+    <ContentPage.Content>
+        <StackLayout >
+            <StackLayout Padding="30, 30, 30, 40" BackgroundColor="#96d1ff" HorizontalOptions="Center" VerticalOptions="Center" AnchorY="0">
+                <Image Source="AgendApp.png" />
+            </StackLayout>
+
+            <StackLayout Padding="30,20,30,0" VerticalOptions="Center">
+                <Label Text="Nuevo registro &#10;" 
+                       HorizontalOptions="CenterAndExpand"
+                       FontSize="Title"
+                       TextColor="#133340"
+                       />
+                <Entry Placeholder="Nombre"
+                       Text="{Binding NombreTxt, Mode=TwoWay}"
+                       />
+                <Entry Placeholder="Usuario"
+                       Text="{Binding UsuarioTxt, Mode=TwoWay}"
+                       />
+                <Entry Placeholder="Password"
+                       Text="{Binding PasswordTxt, Mode=TwoWay}"
+                       />
+            </StackLayout>
+
+            <StackLayout Padding="30,20,30,0" VerticalOptions="Center">
+                <Button Text="Registrar"
+                        BackgroundColor="#f23640"
+                        TextColor="white"
+                        Command="{Binding RegistrarCommand}"
+                        />
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

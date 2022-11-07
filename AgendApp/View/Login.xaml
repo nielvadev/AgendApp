@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AgendApp.View.Login"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <StackLayout >
+            <StackLayout Padding="30, 120, 30, 40" BackgroundColor="#96d1ff" HorizontalOptions="Center" VerticalOptions="Center" AnchorY="0">
+                <Image Source="AgendApp.png" />
+            </StackLayout>
+
+            <StackLayout Padding="30,20,30,0" VerticalOptions="Center">
+                <Label Text="Iniciar Sesión &#10;" 
+                       HorizontalOptions="CenterAndExpand"
+                       FontSize="Title"
+                       TextColor="#133340"
+                       />
+                <Entry Placeholder="Usuario"  
+                       Text="{Binding UsuarioTxt, Mode=TwoWay}"/>
+                <Entry Placeholder="Contraseña" 
+                       IsPassword="True" 
+                       Text="{Binding PasswordTxt, Mode=TwoWay}"/>
+                <Button VerticalOptions="Center" 
+                    x:Name="login"    
+                    Text="Ingresar" 
+                    Command="{Binding LoginCommand}"
+                    CornerRadius="10"
+                    TextColor="white"
+                    BackgroundColor="#133340"/>
+
+                <Label  HorizontalOptions="Center"
+                    VerticalOptions="CenterAndExpand">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="¿No estas registrado? " />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Button VerticalOptions="Center" 
+                    x:Name="registro"
+                    Text="Registrarse" 
+                    Command="{Binding IrRegistrarCommand}"
+                    CornerRadius="10"
+                    TextColor="white"
+                    BackgroundColor="#f23640"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
