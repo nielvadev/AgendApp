@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AgendApp.Model;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
@@ -46,7 +47,25 @@ namespace AgendApp.ViewModel
         #region PROCESOS
         public async Task NuevoRegistro()
         {
-            await DisplayAlert("Registro", "Prueba Registro", "OK");
+            UserModel user = new UserModel();
+            user.Name = NombreTxt;
+            user.UserName = UsuarioTxt;
+            user.UserPassword = PasswordTxt;
+
+            var result = App.Database.SaveUserModelAsync(user).Result;
+
+            List<UserModel> ListUsers = new List<UserModel>();
+
+            ListUsers = App.Database.GetUserModel().Result;
+            if (result == 1)
+            {
+                await DisplayAlert("Registro", UsuarioTxt + " Se ha registrado Exitosamente", "OK");
+            }
+            else
+            {
+                await DisplayAlert("Registro", "El usuario ya existe", "OK");
+            }
+
         }
         #endregion
 

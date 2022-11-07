@@ -4,6 +4,7 @@ using System.Text;
 using Xamarin.Forms;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using AgendApp.Model;
 
 namespace AgendApp.ViewModel
 {
@@ -50,9 +51,12 @@ namespace AgendApp.ViewModel
 
         public async Task LoginMethod()
         {
-            if (UsuarioTxt.ToString() == "admin" && PasswordTxt.ToString() == "1234")
+            string _query = "SELECT * FROM UserModel WHERE UserName = '" + UsuarioTxt + "' AND UserPassword = '" + PasswordTxt + "'";
+            List<UserModel> ListUsers = App.Database.QueryUserModel(_query).Result;
+
+            if (ListUsers.Count > 0)
             {
-                await DisplayAlert("Login", "Bienvenido", "OK");
+                await DisplayAlert("Login", "Bienvenido", "OK"); 
             }
             else
             {
@@ -61,10 +65,10 @@ namespace AgendApp.ViewModel
         }
 #endregion
 
-#region COMANDOS
+        #region COMANDOS
         public ICommand LoginCommand => new Command(async () => await LoginMethod());
         public ICommand IrRegistrarCommand => new Command(async () => await IrRegistrar());
-#endregion
+        #endregion
     }
 }
 
