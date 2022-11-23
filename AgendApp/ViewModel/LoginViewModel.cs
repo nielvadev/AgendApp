@@ -56,7 +56,8 @@ namespace AgendApp.ViewModel
 
             if (ListUsers.Count > 0)
             {
-                await DisplayAlert("Login", "Bienvenido", "OK"); 
+                await DisplayAlert("Login", "Bienvenido", "OK");
+                await Navigation.PushAsync(new View.Tasks());
             }
             else
             {

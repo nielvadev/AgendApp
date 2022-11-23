@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:viewmodel="clr-namespace:AgendApp.ViewModel" x:DataType="viewmodel:RegistroViewModel"
              x:Class="AgendApp.Views.Registro">
     <ContentPage.Content>
-        <StackLayout >
+        <StackLayout>
             <StackLayout Padding="30, 30, 30, 40" BackgroundColor="#96d1ff" HorizontalOptions="Center" VerticalOptions="Center" AnchorY="0">
                 <Image Source="AgendApp.png" />
             </StackLayout>
@@ -27,8 +27,9 @@
 
             <StackLayout Padding="30,20,30,0" VerticalOptions="Center">
                 <Button Text="Registrar"
-                        BackgroundColor="#f23640"
+                        BackgroundColor="#E41F68"
                         TextColor="white"
+                        CornerRadius="10"
                         Command="{Binding RegistrarCommand}"
                         />
             </StackLayout>

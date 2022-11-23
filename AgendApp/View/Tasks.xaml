@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AgendApp.View.Tasks"
+             NavigationPage.HasNavigationBar="False" BackgroundColor="#0A1930">
+    <ContentPage.Content>
+        <Grid>
+            
+        <StackLayout>
+            <Grid Padding="0,0,0,30">
+            <Image Source="task24.png" Margin="0,20,240,0" Scale="0.8"></Image>
+                <Label Text="P E N D I E N T E S"
+                VerticalOptions="Start" 
+                FontSize="25"
+                TextColor="#0efaea"
+                HorizontalOptions="CenterAndExpand" Margin="70,45,0,0" 
+            />
+            </Grid>
+            <Label Text="═╬══════════════════════════════════╬═" HorizontalOptions="CenterAndExpand" Margin="0,-25,0,0" TextColor="#0EFAEA" >
+            </Label>
+
+
+        </StackLayout>
+
+            <Button VerticalOptions="End" 
+                    x:Name="newtask"
+                    Text="+" 
+                    Command="{Binding newTaskCommand}"
+                    FontSize="45"
+                    CornerRadius="60"
+                    TextColor="#0d1930"
+                    BackgroundColor="#E41F68" 
+                    Margin="315,0,20,20" 
+                    Padding="0,0,0,1"                    
+            />
+
+            <Button VerticalOptions="End" 
+                    x:Name="newtask"
+                    Text="≡" 
+                    Command="{Binding menuCommand}"
+                    TextColor="#0d1930"
+                    FontSize="30"
+                    CornerRadius="5"
+                    BackgroundColor="#0efaea" 
+                    Margin="20,0,315,20"                    
+            />
+
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

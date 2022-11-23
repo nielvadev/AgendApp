@@ -2,10 +2,10 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AgendApp.View.Login"
-             NavigationPage.HasNavigationBar="False">
+             NavigationPage.HasNavigationBar="False" BackgroundColor="#0A1930">
     <ContentPage.Content>
         <StackLayout >
-            <StackLayout Padding="30, 120, 30, 40" BackgroundColor="#96d1ff" HorizontalOptions="Center" VerticalOptions="Center" AnchorY="0">
+            <StackLayout Padding="30, 120, 30, 40" HorizontalOptions="Center" VerticalOptions="Center" AnchorY="0">
                 <Image Source="AgendApp.png" />
             </StackLayout>
 
@@ -13,26 +13,36 @@
                 <Label Text="Iniciar Sesión &#10;" 
                        HorizontalOptions="CenterAndExpand"
                        FontSize="Title"
-                       TextColor="#133340"
+                       TextColor="#CCD6F7"
                        />
                 <Entry Placeholder="Usuario"  
-                       Text="{Binding UsuarioTxt, Mode=TwoWay}"/>
+                       Text="{Binding UsuarioTxt, Mode=TwoWay}" 
+                       PlaceholderColor="#CCD6F7" 
+                       TextColor="#3efaea"
+                       HorizontalTextAlignment="Center"
+                />
+                
                 <Entry Placeholder="Contraseña" 
                        IsPassword="True" 
-                       Text="{Binding PasswordTxt, Mode=TwoWay}"/>
+                       Text="{Binding PasswordTxt, Mode=TwoWay}" 
+                       PlaceholderColor="#CCD6F7" 
+                       TextColor="#3efaea"
+                       HorizontalTextAlignment="Center"
+                />
+                
                 <Button VerticalOptions="Center" 
                     x:Name="login"    
                     Text="Ingresar" 
                     Command="{Binding LoginCommand}"
                     CornerRadius="10"
-                    TextColor="white"
-                    BackgroundColor="#133340"/>
+                    TextColor="#0a1930"
+                    BackgroundColor="#3efaea"/>
 
                 <Label  HorizontalOptions="Center"
                     VerticalOptions="CenterAndExpand">
                     <Label.FormattedText>
                         <FormattedString>
-                            <Span Text="¿No estas registrado? " />
+                            <Span Text="¿No estas registrado? " TextColor="#CCD6F7" />
                         </FormattedString>
                     </Label.FormattedText>
                 </Label>
@@ -42,7 +52,7 @@
                     Command="{Binding IrRegistrarCommand}"
                     CornerRadius="10"
                     TextColor="white"
-                    BackgroundColor="#f23640"/>
+                    BackgroundColor="#E41F68"/>
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>

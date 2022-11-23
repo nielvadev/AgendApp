@@ -30,3 +30,6 @@ C:\Users\Juan Daniel\AgendApp\AgendApp\obj\Debug\netstandard2.0\AgendApp.dll
 C:\Users\Juan Daniel\AgendApp\AgendApp\obj\Debug\netstandard2.0\refint\AgendApp.dll
 C:\Users\Juan Daniel\AgendApp\AgendApp\obj\Debug\netstandard2.0\AgendApp.pdb
 C:\Users\Juan Daniel\AgendApp\AgendApp\obj\Debug\netstandard2.0\ref\AgendApp.dll
+C:\Users\Juan Daniel\Source\Repos\AgendApp\AgendApp\obj\Debug\netstandard2.0\View\Tasks.xaml.g.cs
+C:\Users\Juan Daniel\Source\Repos\AgendApp\AgendApp\obj\Debug\netstandard2.0\View\NewTask.xaml.g.cs
+C:\Users\Juan Daniel\Source\Repos\AgendApp\AgendApp\obj\Debug\netstandard2.0\View\Menu.xaml.g.cs

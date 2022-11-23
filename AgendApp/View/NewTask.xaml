@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AgendApp.View.NewTask" BackgroundColor="#3c405b" >
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Padding="30, 30, 30, 40" BackgroundColor="#0d1930" HorizontalOptions="Center" VerticalOptions="Center" AnchorY="0">
+                <Image Source="AgendApp.png" />
+            </StackLayout>
+
+            <StackLayout Padding="30,20,30,0" VerticalOptions="Center">
+                <Label Text="Añadir Pendiente &#10;" 
+                       HorizontalOptions="CenterAndExpand"
+                       FontSize="Title"
+                       TextColor="#fff"
+                       />
+                <Entry Placeholder="Nombre"
+                       TextColor="#d7d6e7"
+                       Text="{Binding NombreTxt, Mode=TwoWay}"
+                       />
+                <Entry Placeholder="Usuario"
+                       TextColor="#d7d6e7"
+                       Text="{Binding UsuarioTxt, Mode=TwoWay}"
+                       />
+                <Entry Placeholder="Password"
+                       TextColor="#d7d6e7"
+                       Text="{Binding PasswordTxt, Mode=TwoWay}"
+                       />
+            </StackLayout>
+
+            <StackLayout Padding="30,20,30,0" VerticalOptions="Center">
+                <Button Text="Añadir"
+                        BackgroundColor="#E41F68"
+                        TextColor="#d7d6e7"
+                        CornerRadius="10"
+                        Command="{Binding AddPendienteCommand}"
+                        />
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

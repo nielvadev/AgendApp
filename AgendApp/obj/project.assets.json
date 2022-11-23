@@ -934,11 +934,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Juan Daniel\\AgendApp\\AgendApp\\AgendApp.csproj",
+      "projectUniqueName": "C:\\Users\\Juan Daniel\\Source\\Repos\\AgendApp\\AgendApp\\AgendApp.csproj",
       "projectName": "AgendApp",
-      "projectPath": "C:\\Users\\Juan Daniel\\AgendApp\\AgendApp\\AgendApp.csproj",
+      "projectPath": "C:\\Users\\Juan Daniel\\Source\\Repos\\AgendApp\\AgendApp\\AgendApp.csproj",
       "packagesPath": "C:\\Users\\Juan Daniel\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Juan Daniel\\AgendApp\\AgendApp\\obj\\",
+      "outputPath": "C:\\Users\\Juan Daniel\\Source\\Repos\\AgendApp\\AgendApp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

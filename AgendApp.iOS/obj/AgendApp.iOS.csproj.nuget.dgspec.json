@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Juan Daniel\\AgendApp\\AgendApp.iOS\\AgendApp.iOS.csproj": {}
+    "C:\\Users\\Juan Daniel\\source\\repos\\AgendApp\\AgendApp.iOS\\AgendApp.iOS.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Juan Daniel\\AgendApp\\AgendApp.iOS\\AgendApp.iOS.csproj": {
+    "C:\\Users\\Juan Daniel\\source\\repos\\AgendApp\\AgendApp.iOS\\AgendApp.iOS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Juan Daniel\\AgendApp\\AgendApp.iOS\\AgendApp.iOS.csproj",
+        "projectUniqueName": "C:\\Users\\Juan Daniel\\source\\repos\\AgendApp\\AgendApp.iOS\\AgendApp.iOS.csproj",
         "projectName": "AgendApp.iOS",
-        "projectPath": "C:\\Users\\Juan Daniel\\AgendApp\\AgendApp.iOS\\AgendApp.iOS.csproj",
+        "projectPath": "C:\\Users\\Juan Daniel\\source\\repos\\AgendApp\\AgendApp.iOS\\AgendApp.iOS.csproj",
         "packagesPath": "C:\\Users\\Juan Daniel\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Juan Daniel\\AgendApp\\AgendApp.iOS\\obj\\",
+        "outputPath": "C:\\Users\\Juan Daniel\\source\\repos\\AgendApp\\AgendApp.iOS\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
@@ -32,8 +32,8 @@
         "frameworks": {
           "xamarinios10": {
             "projectReferences": {
-              "C:\\Users\\Juan Daniel\\AgendApp\\AgendApp\\AgendApp.csproj": {
-                "projectPath": "C:\\Users\\Juan Daniel\\AgendApp\\AgendApp\\AgendApp.csproj"
+              "C:\\Users\\Juan Daniel\\source\\repos\\AgendApp\\AgendApp\\AgendApp.csproj": {
+                "projectPath": "C:\\Users\\Juan Daniel\\source\\repos\\AgendApp\\AgendApp\\AgendApp.csproj"
               }
             }
           }
@@ -73,14 +73,14 @@
         }
       }
     },
-    "C:\\Users\\Juan Daniel\\AgendApp\\AgendApp\\AgendApp.csproj": {
+    "C:\\Users\\Juan Daniel\\source\\repos\\AgendApp\\AgendApp\\AgendApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Juan Daniel\\AgendApp\\AgendApp\\AgendApp.csproj",
+        "projectUniqueName": "C:\\Users\\Juan Daniel\\source\\repos\\AgendApp\\AgendApp\\AgendApp.csproj",
         "projectName": "AgendApp",
-        "projectPath": "C:\\Users\\Juan Daniel\\AgendApp\\AgendApp\\AgendApp.csproj",
+        "projectPath": "C:\\Users\\Juan Daniel\\source\\repos\\AgendApp\\AgendApp\\AgendApp.csproj",
         "packagesPath": "C:\\Users\\Juan Daniel\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Juan Daniel\\AgendApp\\AgendApp\\obj\\",
+        "outputPath": "C:\\Users\\Juan Daniel\\source\\repos\\AgendApp\\AgendApp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -4298,11 +4298,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Juan Daniel\\AgendApp\\AgendApp.Android\\AgendApp.Android.csproj",
+      "projectUniqueName": "C:\\Users\\Juan Daniel\\source\\repos\\AgendApp\\AgendApp.Android\\AgendApp.Android.csproj",
       "projectName": "AgendApp.Android",
-      "projectPath": "C:\\Users\\Juan Daniel\\AgendApp\\AgendApp.Android\\AgendApp.Android.csproj",
+      "projectPath": "C:\\Users\\Juan Daniel\\source\\repos\\AgendApp\\AgendApp.Android\\AgendApp.Android.csproj",
       "packagesPath": "C:\\Users\\Juan Daniel\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Juan Daniel\\AgendApp\\AgendApp.Android\\obj\\",
+      "outputPath": "C:\\Users\\Juan Daniel\\source\\repos\\AgendApp\\AgendApp.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -4323,8 +4323,8 @@
       "frameworks": {
         "monoandroid12.0": {
           "projectReferences": {
-            "C:\\Users\\Juan Daniel\\AgendApp\\AgendApp\\AgendApp.csproj": {
-              "projectPath": "C:\\Users\\Juan Daniel\\AgendApp\\AgendApp\\AgendApp.csproj"
+            "C:\\Users\\Juan Daniel\\source\\repos\\AgendApp\\AgendApp\\AgendApp.csproj": {
+              "projectPath": "C:\\Users\\Juan Daniel\\source\\repos\\AgendApp\\AgendApp\\AgendApp.csproj"
             }
           }
         }

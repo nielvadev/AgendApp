@@ -89,7 +89,9 @@
     <AndroidResource Include="Resources\mipmap-xxxhdpi\icon.png" />
     <AndroidResource Include="Resources\mipmap-xxxhdpi\launcher_foreground.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\task24.png" />
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\AgendApp\AgendApp.csproj">
       <Project>{BFFB8078-6417-4048-BCBF-BFA7B4247611}</Project>
