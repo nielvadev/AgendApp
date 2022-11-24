@@ -28,23 +28,10 @@ namespace AgendApp.ViewModel
         }
         #endregion
 
-        #region PROCESOS
-        public async Task ProcesoAsync()
-        {
-
-        }
-
-
-        public void ProcesoSimple()
-        {
-
-        }
-        #endregion
-
         #region COMANDOS
-        public ICommand ProcesoAsynCommand => new Command(async () => await ProcesoAsync());
+        public ICommand irPendientesCommand => new Command(async () => await Navigation.PushAsync(new View.Tasks()));
+        public ICommand logOutCommand => new Command(async () => await Navigation.PushAsync(new View.Login()));
 
-        public ICommand ProcesoSimpCommand => new Command(ProcesoSimple);
         #endregion
     }
 }

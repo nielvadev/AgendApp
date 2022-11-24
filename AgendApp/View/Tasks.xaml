@@ -35,7 +35,7 @@
             />
 
             <Button VerticalOptions="End" 
-                    x:Name="newtask"
+                    x:Name="menu"
                     Text="≡" 
                     Command="{Binding menuCommand}"
                     TextColor="#0d1930"

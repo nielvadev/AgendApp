@@ -38,6 +38,11 @@ namespace AgendApp.ViewModel
             await Navigation.PushAsync(new View.Menu());
         }
 
+        public async Task irNewTask()
+        {
+            await Navigation.PushAsync(new View.NewTask());
+        }
+
         public void ProcesoSimple()
         {
 
@@ -45,9 +50,10 @@ namespace AgendApp.ViewModel
         #endregion
 
         #region COMANDOS
-        public ICommand ProcesoAsynCommand => new Command(async () => await ProcesoAsync());
+        //public ICommand ProcesoAsynCommand => new Command(async () => await ProcesoAsync());
         public ICommand menuCommand => new Command(async () => await IrMenu());
-        public ICommand ProcesoSimpCommand => new Command(ProcesoSimple);
+        public ICommand newTaskCommand => new Command(async () => await irNewTask());
+        //public ICommand ProcesoSimpCommand => new Command(ProcesoSimple);
         #endregion
     }
 }

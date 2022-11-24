@@ -1,19 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="AgendApp.View.Menu">
+             x:Class="AgendApp.View.Menu"
+             NavigationPage.HasNavigationBar="False" BackgroundColor="#0A1930">
     <ContentPage.Content>
         <Grid>
             
             <StackLayout>
             
             <Grid Padding="0,0,0,30">
-                <Image Source="task24.png" Margin="0,20,240,0" Scale="0.8"></Image>
+                <Image Source="menu.png" Margin="0,30,130,0" Scale="0.8"></Image>
                 <Label  Text="M E N Ú"
                             VerticalOptions="Start" 
                             FontSize="25"
                             TextColor="#0efaea"
-                            HorizontalOptions="CenterAndExpand" Margin="70,45,0,0" 
+                            HorizontalOptions="CenterAndExpand" Margin="70,38,0,0" 
                     />
             </Grid>
             <Label Text="═╬══════════════════════════════════╬═" 
@@ -22,19 +23,30 @@
                        TextColor="#0EFAEA" >
             </Label>
             </StackLayout>
-            <StackLayout>
 
-                <Button VerticalOptions="End" 
-                        x:Name="menu"
-                        Text="≡" 
-                        Command="{Binding menuCommand}"
-                        TextColor="#0d1930"
-                        FontSize="30"
-                        CornerRadius="5"
-                        BackgroundColor="#0efaea" 
-                        Margin="20,0,315,20"                    
-                    />
+            <StackLayout VerticalOptions="CenterAndExpand">
+
+                <Button
+                    Text="P E N D I E N T E S"
+                    TextColor="#0D1930"
+                    VerticalOptions="Center"
+                    FontSize="20"
+                    Command="{Binding irPendientesCommand}">
+                </Button>
+
+                <Button
+                    Text="C E R R A R   S E S I Ó N"
+                    TextColor="#0D1930"
+                    VerticalOptions="Center"
+                    FontSize="20"
+                    Command="{Binding logOutCommand}">
+
+                </Button>
+
+
+
             </StackLayout>
+            
 
         </Grid>
     </ContentPage.Content>

@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:viewmodel="clr-namespace:AgendApp.ViewModel" x:DataType="viewmodel:RegistroViewModel"
-             x:Class="AgendApp.Views.Registro">
+             x:Class="AgendApp.Views.Registro"
+             BackgroundColor="#d6d7d7">
     <ContentPage.Content>
         <StackLayout>
             <StackLayout Padding="30, 30, 30, 40" BackgroundColor="#96d1ff" HorizontalOptions="Center" VerticalOptions="Center" AnchorY="0">
@@ -12,7 +13,7 @@
                 <Label Text="Nuevo registro &#10;" 
                        HorizontalOptions="CenterAndExpand"
                        FontSize="Title"
-                       TextColor="#133340"
+                       TextColor="#0d1930"
                        />
                 <Entry Placeholder="Nombre"
                        Text="{Binding NombreTxt, Mode=TwoWay}"

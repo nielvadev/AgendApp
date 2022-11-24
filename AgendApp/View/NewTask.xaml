@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="AgendApp.View.NewTask" BackgroundColor="#3c405b" >
+             x:Class="AgendApp.View.NewTask" BackgroundColor="#d6d7d7" >
     <ContentPage.Content>
         <StackLayout>
             <StackLayout Padding="30, 30, 30, 40" BackgroundColor="#0d1930" HorizontalOptions="Center" VerticalOptions="Center" AnchorY="0">
@@ -12,20 +12,38 @@
                 <Label Text="Añadir Pendiente &#10;" 
                        HorizontalOptions="CenterAndExpand"
                        FontSize="Title"
-                       TextColor="#fff"
+                       TextColor="#0d1930"
+                       HorizontalTextAlignment="Center"
                        />
                 <Entry Placeholder="Nombre"
-                       TextColor="#d7d6e7"
-                       Text="{Binding NombreTxt, Mode=TwoWay}"
+                       TextColor="#0d1930"
+                       Text="{Binding NameTask, Mode=TwoWay}"
+                       HorizontalTextAlignment="Center"
+                       FontSize="18"
                        />
-                <Entry Placeholder="Usuario"
-                       TextColor="#d7d6e7"
-                       Text="{Binding UsuarioTxt, Mode=TwoWay}"
+                <Entry Placeholder="Descripción"
+                       TextColor="#0d1930"
+                       Text="{Binding DescriptionTask, Mode=TwoWay}"
+                       HorizontalTextAlignment="Center"
                        />
-                <Entry Placeholder="Password"
-                       TextColor="#d7d6e7"
-                       Text="{Binding PasswordTxt, Mode=TwoWay}"
-                       />
+                <Grid>
+                    <Label Text="Inicio Tarea" FontSize="18" VerticalOptions="Center" TextColor="#0d1930"/>
+                    <DatePicker 
+                        Date="{Binding DateTaskI, Mode=TwoWay}"
+                        Format=""
+                        HorizontalOptions="End"
+                        TextColor="#0d1930"
+                    />
+                </Grid>
+                <Grid>
+                    <Label Text="Cumplimiento Esperado" FontSize="18" VerticalOptions="Center" TextColor="#0d1930"/>
+                    <DatePicker 
+                        Date="{Binding DateTaskF, Mode=TwoWay}"
+                        Format=""
+                        HorizontalOptions="End"
+                        TextColor="#0d1930"
+                    />
+                </Grid>
             </StackLayout>
 
             <StackLayout Padding="30,20,30,0" VerticalOptions="Center">
