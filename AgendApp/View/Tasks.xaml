@@ -93,7 +93,7 @@
                                            HorizontalTextAlignment="Start"
                                            FontSize="16"
                                            TextColor="#d6d7d7"/>
-                                    <Image Source="task.png" Grid.Row="0" Grid.Column="0" Grid.RowSpan="4" Scale="1" Margin="7,0,0,0" />
+                                    <Image Source="Task.png" Grid.Row="0" Grid.Column="0" Grid.RowSpan="4" Scale="1" Margin="7,0,0,0" />
                                     <Label Text="{Binding TaskDateI}" Grid.Row="2" Grid.Column="1" TextColor="Gray"/>
                                     <Label Text="{Binding TaskDateF}" Grid.Row="2" Grid.Column="4" TextColor="Gray"/>
                                     <Label Text="{Binding TaskPriority}" 
@@ -106,16 +106,7 @@
                                            FontAttributes="Bold"
                                            BackgroundColor="#d6d7d7"/>
 
-                                    <Button Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="3"
-                                            BackgroundColor="#0EFAEA" ImageSource="edit.png"
-                                            x:Name="edit" Command="{Binding editCommand}"
-                                            /> 
 
-                                    
-                                    <Button Grid.Row="4" Grid.Column="3" Grid.ColumnSpan="3"
-                                            BackgroundColor="#E41F68" ImageSource="delete.png"
-                                            x:Name="delete" Command="{Binding deleteCommand}"
-                                            />
 
                                 </Grid>
                             </ViewCell>
