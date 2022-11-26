@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AgendApp.Model;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,29 +11,48 @@ namespace AgendApp.ViewModel
     public class TasksViewModel:BaseViewModel
     {
         #region VARIABLES
-        string _Texto;
+        public object _ShowTasks;
         #endregion
 
         #region CONSTRUCTOR
         public TasksViewModel(INavigation navigation)
         {
             Navigation = navigation;
+            GetTasks();
         }
+
         #endregion
 
         #region PROPIEDADES
-        public string Texto
+        public object ShowTasks
         {
-            get { return _Texto; }
-            set { SetValue(ref _Texto, value); }
+            get { return _ShowTasks; }
+            set { SetValue(ref _ShowTasks, value); }
         }
         #endregion
-
+        
         #region PROCESOS
-        public async Task ProcesoAsync()
+        public void GetTasks()
         {
+
+
             
+            var tasks = App.Database.GetTaskAsync().Result;
+            
+            if (tasks == null)
+            {
+                ShowTasks = "No hay tareas";
+            }
+            else
+            {
+                ShowTasks = tasks;
+            }
+
         }
+        //public async Task ProcesoAsync()
+        //{
+
+        //}
         public async Task IrMenu()
         {
             await Navigation.PushAsync(new View.Menu());

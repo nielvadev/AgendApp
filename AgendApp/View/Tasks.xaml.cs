@@ -18,5 +18,10 @@ namespace AgendApp.View
             InitializeComponent();
             BindingContext = new TasksViewModel(Navigation);
         }
+
+        private void ListTaksView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        {
+
+        }
     }
 }

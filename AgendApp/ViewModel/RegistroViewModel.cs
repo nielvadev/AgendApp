@@ -11,11 +11,12 @@ namespace AgendApp.ViewModel
     public class RegistroViewModel:BaseViewModel
     {
         #region VARIABLES
-        string nombre;
-        string usuario;
-        string password;
+        string _Name;
+        string _UserName;
+        string _UserPassword;
 
-        
+
+
         #endregion
 
         #region CONSTRUCTOR
@@ -28,18 +29,18 @@ namespace AgendApp.ViewModel
         #region PROPIEDADES
         public string NombreTxt
         {
-            get { return nombre; }
-            set { SetValue(ref this.nombre, value); }
+            get { return _Name; }
+            set { SetValue(ref this._Name, value); }
         }
         public string UsuarioTxt
         {
-            get { return usuario; }
-            set { SetValue(ref this.usuario, value); }
+            get { return _UserName; }
+            set { SetValue(ref this._UserName, value); }
         }
         public string PasswordTxt
         {
-            get { return password; }
-            set { SetValue(ref this.password, value); }
+            get { return _UserPassword; }
+            set { SetValue(ref this._UserPassword, value); }
         }
 
         #endregion
@@ -52,19 +53,24 @@ namespace AgendApp.ViewModel
             user.UserName = UsuarioTxt;
             user.UserPassword = PasswordTxt;
 
-            var result = App.Database.SaveUserModelAsync(user).Result;
+            var exists = await App.Database.GetUser(user.UserName);
 
-            List<UserModel> ListUsers = new List<UserModel>();
-
-            ListUsers = App.Database.GetUserModel().Result;
-            if (result == 1)
+            if (exists == 0)
             {
-                await DisplayAlert("Registro", UsuarioTxt + " Se ha registrado Exitosamente", "OK");
+                await App.Database.SaveUserModelAsync(user);
+                await Application.Current.MainPage.DisplayAlert("Felicidades!", "Usuario Registrado con Éxito", "OK");
+                await Navigation.PushAsync(new View.Login());
             }
             else
             {
-                await DisplayAlert("Registro", "El usuario ya existe", "OK");
+                await Application.Current.MainPage.DisplayAlert("Error", "El usuario ya existe", "OK");
             }
+
+            
+
+            List<UserModel> ListUsers = new List<UserModel>();
+            ListUsers = App.Database.GetUserModel().Result;
+            
 
         }
         #endregion

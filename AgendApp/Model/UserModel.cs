@@ -7,14 +7,12 @@ namespace AgendApp.Model
 {
     public class UserModel
     {
-        [PrimaryKey, AutoIncrement]
-        public int UserID { get; set; }
-        [MaxLength(30)]
+
+        [PrimaryKey, Unique, MaxLength(30)]
         public string Name { get; set; }
         [MaxLength(30)]
         public string UserName { get; set; }
         [MaxLength(10)]
         public string UserPassword { get; set; }
-        
     }
 }

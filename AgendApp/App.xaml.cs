@@ -33,18 +33,8 @@ namespace AgendApp
 
         protected override void OnStart()
         {
-            /*UserModel user = new UserModel();
-            user.Name = "Administrador";
-            user.UserName = "admin";
-            user.UserPassword = "1234";
-
-            var result = App.Database.SaveUserModelAsync(user).Result;*/
+                        
             
-            List<UserModel> ListUsers = new List<UserModel>();
-
-            ListUsers = App.Database.GetUserModel().Result;
-
-
         }
 
         protected override void OnSleep()

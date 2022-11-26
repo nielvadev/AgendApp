@@ -5,22 +5,82 @@
              NavigationPage.HasNavigationBar="False" BackgroundColor="#0A1930">
     <ContentPage.Content>
         <Grid>
-            
-        <StackLayout>
-            <Grid Padding="0,0,0,30">
-            <Image Source="task24.png" Margin="0,20,240,0" Scale="0.8"></Image>
-                <Label Text="P E N D I E N T E S"
-                VerticalOptions="Start" 
-                FontSize="25"
-                TextColor="#0efaea"
-                HorizontalOptions="CenterAndExpand" Margin="70,45,0,0" 
-            />
-            </Grid>
-            <Label Text="═╬══════════════════════════════════╬═" HorizontalOptions="CenterAndExpand" Margin="0,-25,0,0" TextColor="#0EFAEA" >
-            </Label>
+
+            <StackLayout>
+                <Grid Padding="0,0,0,30">
+                    <Image Source="task24.png" Margin="0,20,240,0" Scale="0.8"></Image>
+                    <Label Text="P E N D I E N T E S"
+                    VerticalOptions="Start" 
+                    FontSize="25"
+                    TextColor="#0efaea"
+                    HorizontalOptions="CenterAndExpand" Margin="70,45,0,0" 
+                />
+                </Grid>
+                <Label Text="═╬══════════════════════════════════╬═" HorizontalOptions="CenterAndExpand" Margin="0,-25,0,0" TextColor="#0EFAEA" >
+                </Label>
 
 
-        </StackLayout>
+            </StackLayout>
+            <StackLayout Margin="0,170,0,50" >
+
+                <ListView   x:Name="ListTaksView" 
+                            ItemsSource="{Binding ShowTasks}" 
+                            IsPullToRefreshEnabled="False"
+                            SeparatorColor="#3efaea"
+                            HasUnevenRows="True"
+                            ItemSelected="ListTaksView_ItemSelected"
+                            BackgroundColor="#697493"
+                            
+                >
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell >
+                                <Grid >
+                                    <Grid.RowDefinitions >
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="40"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+
+                                        
+                                        
+
+                                    </Grid.ColumnDefinitions>
+                                    <Label Text="{Binding TaskName}" 
+                                           Grid.Row="0" Grid.Column="0" 
+                                           Grid.ColumnSpan="4" 
+                                           HorizontalTextAlignment="Center"
+                                           FontSize="19"
+                                           TextColor="#d6d7d7" 
+                                           Margin="10,0"
+                                           />
+                                    <Label Text="{Binding TaskDescription}" 
+                                           Grid.Row="1" Grid.Column="0"
+                                           Grid.ColumnSpan="4"
+                                           Margin="40,0,10,0" 
+                                           HorizontalTextAlignment="Start"
+                                           FontSize="16"
+                                           TextColor="#0d1930"/>
+                                    <Image Source="task24.png" Grid.Row="0" Grid.Column="0" Grid.RowSpan="3" Scale="1"/>
+                                    <Label Text="{Binding TaskDateI}" Grid.Row="2" Grid.Column="1"/>
+                                    <Label Text="{Binding TaskDateF}" Grid.Row="2" Grid.Column="2"/>
+                                    <Label Text="{Binding TaskPriority}" 
+                                           Grid.Row="0" Grid.Column="4"
+                                           Grid.RowSpan="2"
+                                           VerticalTextAlignment="Center"
+                                           FontSize="20"/>
+
+                                </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
 
             <Button VerticalOptions="End" 
                     x:Name="newtask"

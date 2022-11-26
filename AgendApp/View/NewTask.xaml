@@ -17,43 +17,71 @@
                        />
                 <Entry Placeholder="Nombre"
                        TextColor="#0d1930"
-                       Text="{Binding NameTask, Mode=TwoWay}"
+                       Text="{Binding TaskName, Mode=TwoWay}"
                        HorizontalTextAlignment="Center"
                        FontSize="18"
                        />
                 <Entry Placeholder="Descripción"
                        TextColor="#0d1930"
-                       Text="{Binding DescriptionTask, Mode=TwoWay}"
+                       Text="{Binding TaskDescription, Mode=TwoWay}"
                        HorizontalTextAlignment="Center"
                        />
                 <Grid>
                     <Label Text="Inicio Tarea" FontSize="18" VerticalOptions="Center" TextColor="#0d1930"/>
                     <DatePicker 
-                        Date="{Binding DateTaskI, Mode=TwoWay}"
-                        Format=""
+                        Date="{Binding TaskDateI, Mode=TwoWay}"
+                        Format="dd/MM/yyyy"
                         HorizontalOptions="End"
                         TextColor="#0d1930"
+                        
                     />
                 </Grid>
                 <Grid>
                     <Label Text="Cumplimiento Esperado" FontSize="18" VerticalOptions="Center" TextColor="#0d1930"/>
                     <DatePicker 
-                        Date="{Binding DateTaskF, Mode=TwoWay}"
-                        Format=""
+                        Date="{Binding TaskDateF, Mode=TwoWay}"
                         HorizontalOptions="End"
+                        Format="dd/MM/yyyy"
                         TextColor="#0d1930"
+                        
+                        
                     />
                 </Grid>
             </StackLayout>
-
+            
+            <Grid>
+                <Label Text="Prioridad" 
+                       FontSize="18" 
+                       HorizontalOptions="Center" 
+                       TextColor="#0d1932" Margin="0,0,20,0"
+                />
+                <Label 
+                    BindingContext="{x:Reference priSlider}"
+                    Text="{Binding Value}"
+                    TextColor="#E41F68"
+                    FontSize="18"
+                    HorizontalOptions="Center" Margin="90,0,0,0"
+                    />
+                <Stepper Minimum="1" 
+                         Maximum="3" 
+                         x:Name="priSlider" 
+                         Margin="0,30,0,0"    
+                         Increment="1"
+                         HorizontalOptions="CenterAndExpand"
+                         Value="{Binding TaskPriority, Mode=TwoWay}"
+                />
+            </Grid>
+            
             <StackLayout Padding="30,20,30,0" VerticalOptions="Center">
                 <Button Text="Añadir"
                         BackgroundColor="#E41F68"
                         TextColor="#d7d6e7"
                         CornerRadius="10"
-                        Command="{Binding AddPendienteCommand}"
+                        Command="{Binding AddTaskCommand}"
                         />
             </StackLayout>
+
+            
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
