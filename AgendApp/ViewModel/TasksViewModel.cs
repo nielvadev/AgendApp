@@ -62,6 +62,20 @@ namespace AgendApp.ViewModel
         {
             await Navigation.PushAsync(new View.NewTask());
         }
+        
+        public Task DeleteTask()
+        {
+            {
+                var tasks = App.Database.GetTaskAsync().Result;
+                foreach (var task in tasks)
+                {
+                    App.Database.DeleteTaskAsync(task);
+                }
+                GetTasks();
+            }
+
+            return Task.CompletedTask;
+        }
 
         public void ProcesoSimple()
         {
@@ -74,6 +88,9 @@ namespace AgendApp.ViewModel
         public ICommand menuCommand => new Command(async () => await IrMenu());
         public ICommand newTaskCommand => new Command(async () => await irNewTask());
         //public ICommand ProcesoSimpCommand => new Command(ProcesoSimple);
+        public ICommand deleteCommand => new Command(async () => await DeleteTask());
+
+
         #endregion
     }
 }

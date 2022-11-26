@@ -2,7 +2,8 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AgendApp.View.Tasks"
-             NavigationPage.HasNavigationBar="False" BackgroundColor="#0A1930">
+             NavigationPage.HasNavigationBar="False" BackgroundColor="#0A1930"
+             >
     <ContentPage.Content>
         <Grid>
 
@@ -29,9 +30,30 @@
                             SeparatorColor="#3efaea"
                             HasUnevenRows="True"
                             ItemSelected="ListTaksView_ItemSelected"
-                            BackgroundColor="#697493"
+                            BackgroundColor="#0d1930"
+                            
                             
                 >
+                    <ListView.Header>
+                        <StackLayout Orientation="Horizontal"  HorizontalOptions="End" >
+                            <Label Text="Prioridad"
+                                   TextColor="#0efaea"
+                                   FontSize="14"
+                                   HorizontalTextAlignment="End" Padding="3"
+                                   
+                                    />
+                        </StackLayout>
+                    </ListView.Header>
+                    <ListView.Footer>
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                            <Label Text="TUS NUEVOS PENDIENTES SE MOSTRARÁN AQUÍ"
+                                   TextColor="#d6d7d7"
+                                   HorizontalTextAlignment="Center" FontFamily="Calibri"
+                                   Padding="0,10,0,30"
+                                   />
+                        </StackLayout>
+                    </ListView.Footer>
+                    
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell >
@@ -40,40 +62,60 @@
                                         <RowDefinition Height="Auto"/>
                                         <RowDefinition Height="Auto"/>
                                         <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
                                     </Grid.RowDefinitions>
                                     <Grid.ColumnDefinitions>
                                         <ColumnDefinition Width="40"/>
-                                        <ColumnDefinition Width="*"/>
-                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="90"/>
+                                        <ColumnDefinition Width="52"/>
+                                        <ColumnDefinition Width="60"/>
+                                        <ColumnDefinition Width="88"/>
                                         <ColumnDefinition Width="*"/>
 
                                         
                                         
 
                                     </Grid.ColumnDefinitions>
+                                    
                                     <Label Text="{Binding TaskName}" 
                                            Grid.Row="0" Grid.Column="0" 
-                                           Grid.ColumnSpan="4" 
+                                           Grid.ColumnSpan="6" 
                                            HorizontalTextAlignment="Center"
                                            FontSize="19"
-                                           TextColor="#d6d7d7" 
-                                           Margin="10,0"
+                                           TextColor="#fff" 
+                                           FontAttributes="Bold"
+                                           Margin="10,0" Padding="0,3,0,0"
                                            />
                                     <Label Text="{Binding TaskDescription}" 
                                            Grid.Row="1" Grid.Column="0"
-                                           Grid.ColumnSpan="4"
-                                           Margin="40,0,10,0" 
+                                           Grid.ColumnSpan="5"
+                                           Margin="45,0,10,0" 
                                            HorizontalTextAlignment="Start"
                                            FontSize="16"
-                                           TextColor="#0d1930"/>
-                                    <Image Source="task24.png" Grid.Row="0" Grid.Column="0" Grid.RowSpan="3" Scale="1"/>
-                                    <Label Text="{Binding TaskDateI}" Grid.Row="2" Grid.Column="1"/>
-                                    <Label Text="{Binding TaskDateF}" Grid.Row="2" Grid.Column="2"/>
+                                           TextColor="#d6d7d7"/>
+                                    <Image Source="task.png" Grid.Row="0" Grid.Column="0" Grid.RowSpan="4" Scale="1" Margin="7,0,0,0" />
+                                    <Label Text="{Binding TaskDateI}" Grid.Row="2" Grid.Column="1" TextColor="Gray"/>
+                                    <Label Text="{Binding TaskDateF}" Grid.Row="2" Grid.Column="4" TextColor="Gray"/>
                                     <Label Text="{Binding TaskPriority}" 
-                                           Grid.Row="0" Grid.Column="4"
-                                           Grid.RowSpan="2"
+                                           Grid.Row="0" Grid.Column="5"
+                                           Grid.RowSpan="1"
                                            VerticalTextAlignment="Center"
-                                           FontSize="20"/>
+                                           HorizontalTextAlignment="Center"
+                                           FontSize="20"
+                                           TextColor="#0d1930"
+                                           FontAttributes="Bold"
+                                           BackgroundColor="#d6d7d7"/>
+
+                                    <Button Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="3"
+                                            BackgroundColor="#0EFAEA" ImageSource="edit.png"
+                                            x:Name="edit" Command="{Binding editCommand}"
+                                            /> 
+
+                                    
+                                    <Button Grid.Row="4" Grid.Column="3" Grid.ColumnSpan="3"
+                                            BackgroundColor="#E41F68" ImageSource="delete.png"
+                                            x:Name="delete" Command="{Binding deleteCommand}"
+                                            />
 
                                 </Grid>
                             </ViewCell>
@@ -101,7 +143,7 @@
                     TextColor="#0d1930"
                     FontSize="30"
                     CornerRadius="5"
-                    BackgroundColor="#0efaea" 
+                    BackgroundColor="#0efaea"
                     Margin="20,0,315,20"                    
             />
 

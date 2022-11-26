@@ -1316,3 +1316,6 @@ C:\Users\Juan Daniel\Source\Repos\AgendApp\AgendApp.Android\obj\Debug\120\androi
 C:\Users\Juan Daniel\Source\Repos\AgendApp\AgendApp.Android\obj\Debug\120\android\assets\System.Security.Principal.Windows.dll
 C:\Users\Juan Daniel\Source\Repos\AgendApp\AgendApp.Android\obj\Debug\120\res\drawable\task24.png
 C:\Users\Juan Daniel\source\repos\AgendApp\AgendApp.Android\obj\Debug\120\res\drawable\menu.png
+C:\Users\Juan Daniel\source\repos\AgendApp\AgendApp.Android\obj\Debug\120\res\drawable\task.png
+C:\Users\Juan Daniel\source\repos\AgendApp\AgendApp.Android\obj\Debug\120\res\drawable\edit.png
+C:\Users\Juan Daniel\source\repos\AgendApp\AgendApp.Android\obj\Debug\120\res\drawable\delete.png
