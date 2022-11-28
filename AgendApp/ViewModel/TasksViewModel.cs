@@ -1,4 +1,5 @@
 ﻿using AgendApp.Model;
+using Rg.Plugins.Popup.Services;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -121,20 +122,56 @@ namespace AgendApp.ViewModel
             await Navigation.PushAsync(new View.NewTask());
         }
         
-        public Task DeleteTask()
+        public async Task DeleteTaskAsync()
         {
-            {
-                var tasks = App.Database.GetTaskAsync().Result;
-                foreach (var task in tasks)
-                {
-                    App.Database.DeleteTaskAsync(task);
-                }
-                GetTasks();
-            }
-
-            return Task.CompletedTask;
+            TaskModel task = new TaskModel();
+            task.TaskName = TaskName;
+            task.TaskDescription = TaskDescription;
+            task.TaskDateI = TaskDateI;
+            task.TaskDateF = TaskDateF;
+            task.TaskPriority = TaskPriority;
+            task.TaskStatus = TaskStatus;
+            
+            await App.Database.DeleteTaskAsync(task);
+            await Application.Current.MainPage.DisplayAlert("Alerta", "Tarea eliminada", "OK");
+            await Application.Current.MainPage.Navigation.PushAsync(new View.Tasks());
+            await PopupNavigation.Instance.PopAsync(true);
+            
         }
+        
+        public async Task UpdateTaskAsync()
+        {
+            TaskModel task = new TaskModel();
+            task.TaskName = TaskName;
+            task.TaskDescription = TaskDescription;
+            task.TaskDateI = TaskDateI;
+            task.TaskDateF = TaskDateF;
+            task.TaskPriority = TaskPriority;
+            task.TaskStatus = TaskStatus;
 
+            await App.Database.UpdateTaskAsync(task);
+            await Application.Current.MainPage.DisplayAlert("Alerta", "Tarea eliminada", "OK");
+            await Application.Current.MainPage.Navigation.PushAsync(new View.Tasks());
+            await PopupNavigation.Instance.PopAsync(true);
+            
+        }
+        public async Task CompleteTaskAsync()
+        {
+            TaskModel task = new TaskModel();
+            task.TaskName = TaskName;
+            task.TaskDescription = TaskDescription;
+            task.TaskDateI = TaskDateI;
+            task.TaskDateF = TaskDateF;
+            task.TaskPriority = TaskPriority;
+            task.TaskStatus = "Completada";
+
+            await App.Database.UpdateTaskAsync(task);
+            await Application.Current.MainPage.DisplayAlert("Felicidades !", "Completaste tu tarea", "OK");
+            await Application.Current.MainPage.Navigation.PushAsync(new View.Tasks());
+            await PopupNavigation.Instance.PopAsync(true);
+            
+        }
+        
         public void ProcesoSimple()
         {
 
@@ -143,6 +180,9 @@ namespace AgendApp.ViewModel
 
         #region COMANDOS
         //public ICommand ProcesoAsynCommand => new Command(async () => await ProcesoAsync());
+        public ICommand DeleteTaskCommand => new Command(async () => await DeleteTaskAsync());
+        public ICommand UpdateTaskCommand => new Command(async () => await UpdateTaskAsync());
+        public ICommand CompleteTaskCommand => new Command(async () => await CompleteTaskAsync());
         public ICommand menuCommand => new Command(async () => await IrMenu());
         public ICommand newTaskCommand => new Command(async () => await irNewTask());
         //public ICommand ProcesoSimpCommand => new Command(ProcesoSimple);

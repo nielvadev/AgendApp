@@ -1,5 +1,7 @@
 ﻿using AgendApp.Model;
 using AgendApp.ViewModel;
+using Rg.Plugins.Popup.Extensions;
+using Rg.Plugins.Popup.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,6 +25,11 @@ namespace AgendApp.View.PopUp
         {
             InitializeComponent();
             BindingContext = new TasksViewModel(selectedItem);
+        }
+
+        private async void Button_Clicked_1(object sender, EventArgs e)
+        {
+            await PopupNavigation.Instance.PopAsync();
         }
     }
 }

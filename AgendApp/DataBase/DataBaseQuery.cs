@@ -91,6 +91,10 @@ namespace AgendApp.DataBase
             return _database.DeleteAsync(task);
         }
 
+        public Task<int> UpdateTaskAsync(TaskModel task)
+        {
+            return _database.UpdateAsync(task);
+        }
 
 
 
@@ -107,7 +111,8 @@ namespace AgendApp.DataBase
 
 
 
-        //Generico
+
+        ////Generico
         //public Task<List<T>> GetTableModel<T>() where T : new()
         //{
         //    return _database.Table<T>().ToListAsync();

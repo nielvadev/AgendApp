@@ -25,7 +25,11 @@
 
                 <StackLayout Grid.Row="0" Grid.Column="0">
                     <Button ImageSource="back.png"
-                            BackgroundColor="#C5C5C5" Margin="0,0,90,0"/>
+                            BackgroundColor="#C5C5C5" 
+                            Margin="0,0,90,0"
+                            Clicked="Button_Clicked_1"
+                            />
+                    
                 </StackLayout>
 
                 <StackLayout Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2">
