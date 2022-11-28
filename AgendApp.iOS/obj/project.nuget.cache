@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "VCzCIezvX11AvFyfjCAvJt5iflKaQGgAJKBRB/IIR64F+PapKLaumbDocFW/IKm/xqs32NUxOcH9v5+D4JmJTA==",
+  "dgSpecHash": "gjBVYEJ5J2pApic/uM0hgHSgZU3hGqn785lqJCrostv5EjsC0411xQ0UCASMacMODz5pm1VhT5ucvVOGgrEpTA==",
   "success": true,
   "projectFilePath": "C:\\Users\\Juan Daniel\\source\\repos\\AgendApp\\AgendApp.iOS\\AgendApp.iOS.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Juan Daniel\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",
     "C:\\Users\\Juan Daniel\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
+    "C:\\Users\\Juan Daniel\\.nuget\\packages\\rg.plugins.popup\\2.1.0\\rg.plugins.popup.2.1.0.nupkg.sha512",
     "C:\\Users\\Juan Daniel\\.nuget\\packages\\sqlite-net-pcl\\1.8.116\\sqlite-net-pcl.1.8.116.nupkg.sha512",
     "C:\\Users\\Juan Daniel\\.nuget\\packages\\sqlitepclraw.bundle_green\\2.0.4\\sqlitepclraw.bundle_green.2.0.4.nupkg.sha512",
     "C:\\Users\\Juan Daniel\\.nuget\\packages\\sqlitepclraw.core\\2.0.4\\sqlitepclraw.core.2.0.4.nupkg.sha512",

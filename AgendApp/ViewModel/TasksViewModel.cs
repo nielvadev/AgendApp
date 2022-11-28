@@ -21,6 +21,20 @@ namespace AgendApp.ViewModel
             GetTasks();
         }
 
+
+        public TasksViewModel(TaskModel selectedItem)
+        {
+            TaskName = selectedItem.TaskName;
+            TaskDescription = selectedItem.TaskDescription;
+            TaskDateI = selectedItem.TaskDateI;
+            TaskDateF = selectedItem.TaskDateF;
+            TaskPriority = selectedItem.TaskPriority;
+            TaskStatus = selectedItem.TaskStatus;
+
+
+
+
+        }
         #endregion
 
         #region PROPIEDADES
@@ -29,8 +43,52 @@ namespace AgendApp.ViewModel
             get { return _ShowTasks; }
             set { SetValue(ref _ShowTasks, value); }
         }
-        #endregion
+
+        public string _TaskName;
+        public string TaskName
+        {
+            get { return _TaskName; }
+            set { SetValue(ref _TaskName, value); }
+        }
+
+        public string _TaskDescription;
+        public string TaskDescription
+        {
+            get { return _TaskDescription; }
+            set { SetValue(ref _TaskDescription, value); }
+        }
+
+        public string _TaskDateI;
+        public string TaskDateI
+        {
+            get { return _TaskDateI; }
+            set { SetValue(ref _TaskDateI, value); }
+        }
+
+        public string _TaskDateF;
+        public string TaskDateF
+        {
+            get { return _TaskDateF; }
+            set { SetValue(ref _TaskDateF, value); }
+        }
+
+        public string _TaskPriority;
+        public string TaskPriority
+        {
+            get { return _TaskPriority; }
+            set { SetValue(ref _TaskPriority, value); }
+        }
+
+        public string _TaskStatus;
+        public string TaskStatus
+        {
+            get { return _TaskStatus; }
+            set { SetValue(ref _TaskStatus, value); }
+        }
+
         
+        #endregion
+
         #region PROCESOS
         public void GetTasks()
         {
@@ -88,7 +146,7 @@ namespace AgendApp.ViewModel
         public ICommand menuCommand => new Command(async () => await IrMenu());
         public ICommand newTaskCommand => new Command(async () => await irNewTask());
         //public ICommand ProcesoSimpCommand => new Command(ProcesoSimple);
-        public ICommand deleteCommand => new Command(async () => await DeleteTask());
+        //public ICommand deleteCommand => new Command(async () => await DeleteTask());
 
 
         #endregion

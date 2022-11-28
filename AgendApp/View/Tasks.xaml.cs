@@ -4,9 +4,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Rg.Plugins.Popup.Services;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using AgendApp.View.PopUp;
+using AgendApp.Model;
 
 namespace AgendApp.View
 {
@@ -19,9 +22,9 @@ namespace AgendApp.View
             BindingContext = new TasksViewModel(Navigation);
         }
 
-        private void ListTaksView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        private void ListTasksView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
-
+            PopupNavigation.Instance.PushAsync(new PopUpDetailTask(e.SelectedItem as TaskModel));
         }
     }
 }

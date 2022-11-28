@@ -29,7 +29,7 @@
                             IsPullToRefreshEnabled="False"
                             SeparatorColor="#3efaea"
                             HasUnevenRows="True"
-                            ItemSelected="ListTaksView_ItemSelected"
+                            ItemSelected="ListTasksView_ItemSelected"
                             BackgroundColor="#0d1930"
                             
                             

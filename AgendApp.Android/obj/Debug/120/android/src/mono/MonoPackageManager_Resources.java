@@ -7,6 +7,7 @@ public class MonoPackageManager_Resources {
 		"EntityFramework.dll",
 		"EntityFramework.SqlServer.dll",
 		"FormsViewGroup.dll",
+		"Rg.Plugins.Popup.dll",
 		"SQLite-net.dll",
 		"SQLitePCLRaw.batteries_v2.dll",
 		"SQLitePCLRaw.core.dll",

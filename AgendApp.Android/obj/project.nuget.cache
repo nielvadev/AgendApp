@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "XpA1BDM/x/zcasQbvO5OJWep5HkoKHhfhuM5QvHcu1lrd4tP1Mn1n6nnMEcYHErkIovJtNgZVNEs+swvdUc1Zg==",
+  "dgSpecHash": "fEUmGka+TrVBzYvwc/WEGhFXS1cYzuEVO6oYohaGQNqYqjxo/N08a+C6zxF8ijRz1esv6Omkm/Oqt9Tofhu+tw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Juan Daniel\\source\\repos\\AgendApp\\AgendApp.Android\\AgendApp.Android.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Juan Daniel\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",
     "C:\\Users\\Juan Daniel\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
+    "C:\\Users\\Juan Daniel\\.nuget\\packages\\rg.plugins.popup\\2.1.0\\rg.plugins.popup.2.1.0.nupkg.sha512",
     "C:\\Users\\Juan Daniel\\.nuget\\packages\\sqlite-net-pcl\\1.8.116\\sqlite-net-pcl.1.8.116.nupkg.sha512",
     "C:\\Users\\Juan Daniel\\.nuget\\packages\\sqlitepclraw.bundle_green\\2.0.4\\sqlitepclraw.bundle_green.2.0.4.nupkg.sha512",
     "C:\\Users\\Juan Daniel\\.nuget\\packages\\sqlitepclraw.core\\2.0.4\\sqlitepclraw.core.2.0.4.nupkg.sha512",
