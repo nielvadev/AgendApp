@@ -150,7 +150,7 @@ namespace AgendApp.ViewModel
             task.TaskStatus = TaskStatus;
 
             await App.Database.UpdateTaskAsync(task);
-            await Application.Current.MainPage.DisplayAlert("Alerta", "Tarea eliminada", "OK");
+            await Application.Current.MainPage.DisplayAlert("Actualizar", "Cambios guardados con éxito", "OK");
             await Application.Current.MainPage.Navigation.PushAsync(new View.Tasks());
             await PopupNavigation.Instance.PopAsync(true);
             
@@ -181,7 +181,7 @@ namespace AgendApp.ViewModel
         #region COMANDOS
         //public ICommand ProcesoAsynCommand => new Command(async () => await ProcesoAsync());
         public ICommand DeleteTaskCommand => new Command(async () => await DeleteTaskAsync());
-        public ICommand UpdateTaskCommand => new Command(async () => await UpdateTaskAsync());
+        public ICommand EditTaskCommand => new Command(async () => await UpdateTaskAsync());
         public ICommand CompleteTaskCommand => new Command(async () => await CompleteTaskAsync());
         public ICommand menuCommand => new Command(async () => await IrMenu());
         public ICommand newTaskCommand => new Command(async () => await irNewTask());

@@ -15,6 +15,7 @@
                     <RowDefinition Height="Auto"></RowDefinition>
                     <RowDefinition Height="Auto"></RowDefinition>
                     <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
                 </Grid.RowDefinitions>
 
                 <Grid.ColumnDefinitions>
@@ -44,57 +45,69 @@
                            VerticalOptions="Center" />
                 </StackLayout>
 
-                <StackLayout Grid.Row="3" Grid.Column="0" Margin="0,0,0,20">
+                <StackLayout Grid.Row="3" Grid.Column="0">
                     <Label Text="Prioridad"
                            FontSize="13"
                            FontAttributes="Bold"
                            HorizontalOptions="End"/>
                 </StackLayout>
 
-                <StackLayout Grid.Row="3" Grid.Column="1" Margin="0,0,0,20">
-                    <Label Text="{Binding TaskPriority, Mode=TwoWay}" 
-                           FontAttributes="Bold" 
-                           HorizontalOptions="Start" 
-                           VerticalOptions="Center" 
-                           FontSize="13"
-                           TextColor="#E41F68"/>
+
+                <StackLayout Grid.Row="3" Grid.Column="1">
+                    <Label 
+                        BindingContext="{x:Reference priSlider}"
+                        Text="{Binding Value}"
+                        TextColor="#E41F68"
+                        FontSize="18"
+                        HorizontalOptions="Start" 
+                    />
+                </StackLayout>
+                <StackLayout Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2">
+                    
+                    <Stepper Minimum="1" 
+                         Maximum="3" 
+                         x:Name="priSlider"   
+                         Increment="1"
+                         HorizontalOptions="CenterAndExpand"
+                         Value="{Binding TaskPriority, Mode=TwoWay}"
+                    />
                 </StackLayout>
 
-                <StackLayout Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Margin="0,0,0,20">
-                    <Label Text="{Binding TaskDescription, Mode=TwoWay}"
+                <StackLayout Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" Margin="0,0,0,20">
+                    <Entry Text="{Binding TaskDescription, Mode=TwoWay}"
                            TextColor="Gray"
                            HorizontalOptions="Center"/>
                 </StackLayout>
 
-                <StackLayout Grid.Row="5" Grid.Column="0">
+                <StackLayout Grid.Row="6" Grid.Column="0">
                     <Label Text="Programado el: "
                            TextColor="Gray"
                            HorizontalOptions="Start"
                            FontAttributes="Bold"/>
                 </StackLayout>
 
-                <StackLayout Grid.Row="5" Grid.Column="1">
-                    <Label Text="{Binding TaskDateI, Mode=TwoWay}"
-                           TextColor="Gray"
-                           HorizontalOptions="Start"
-                           />
-                </StackLayout>
-
-                <StackLayout Grid.Row="6" Grid.Column="0">
-                    <Label Text="Completarla el: "
-                           TextColor="Gray"
-                           HorizontalOptions="Start"
-                           FontAttributes="Bold"/>
-                </StackLayout>
-
-                <StackLayout Grid.Row="6" Grid.Column="1" Margin="0,0,0,15" >
-                    <Label Text="{Binding TaskDateF, Mode=TwoWay}"
+                <StackLayout Grid.Row="6" Grid.Column="1">
+                    <DatePicker Date="{Binding TaskDateI, Mode=TwoWay}"
                            TextColor="Gray"
                            HorizontalOptions="Start"
                            />
                 </StackLayout>
 
                 <StackLayout Grid.Row="7" Grid.Column="0">
+                    <Label Text="Completarla el: "
+                           TextColor="Gray"
+                           HorizontalOptions="Start"
+                           FontAttributes="Bold"/>
+                </StackLayout>
+
+                <StackLayout Grid.Row="7" Grid.Column="1"  >
+                    <DatePicker Date="{Binding TaskDateF, Mode=TwoWay}"
+                           TextColor="Gray"
+                           HorizontalOptions="Start"
+                           />
+                </StackLayout>
+
+                <StackLayout Grid.Row="8" Grid.Column="0">
                     <Label Text="Estado: "
                            TextColor="Gray"
                            HorizontalOptions="Start"
@@ -102,35 +115,37 @@
                     />
                 </StackLayout>
 
-                <StackLayout Grid.Row="7" Grid.Column="1">
+                <StackLayout Grid.Row="8" Grid.Column="1">
                     <Label Text="{Binding TaskStatus, Mode=TwoWay}"
                            TextColor="Gray"
                            HorizontalOptions="Start"
                            />
                 </StackLayout>
 
-                <StackLayout Grid.Row="8" Grid.Column="0" Grid.ColumnSpan="2">
+                <StackLayout Grid.Row="9" Grid.Column="0" Grid.ColumnSpan="2">
                     <Button Text="Marcar Completada"
                             BackgroundColor="#0F1930"
                             TextColor="White"
                             HorizontalOptions="CenterAndExpand"
+                            VerticalOptions="Start"
                             Command="{Binding CompleteTaskCommand}"
                             CommandParameter="{Binding .}"
                             Padding="67,0"
                             CornerRadius="10"/>
                 </StackLayout>
-                <StackLayout Grid.Row="9" Grid.Column="0">
+                <StackLayout Grid.Row="10" Grid.Column="0">
                     <Button Text="Editar"
                             BackgroundColor="#0EFAEA"
                             TextColor="#0d1930"
                             HorizontalOptions="CenterAndExpand"
+                            VerticalOptions="Center"
                             Command="{Binding EditTaskCommand}" 
                             Padding="40,0"
                             CornerRadius="10"
                             />
                 </StackLayout>
                 
-                <StackLayout Grid.Row="9" Grid.Column="1">
+                <StackLayout Grid.Row="10" Grid.Column="1">
                     <Button Text="Eliminar"
                             BackgroundColor="#E41F68"
                             TextColor="#0d1930"
@@ -139,12 +154,6 @@
                             Padding="34,0"
                             CornerRadius="10"/>
                 </StackLayout>
-
-                
-
-
-
-
 
             </Grid>
         </Frame>
