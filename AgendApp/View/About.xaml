@@ -20,12 +20,17 @@
                            de la Universidad Tecnológica de Pereira - UTP."
                            HorizontalTextAlignment="Center" 
                            />
-                    <StackLayout Margin="0,25,0,0" >
+                    <StackLayout Margin="0,25" >
                         
                         <Label Text="Contactos:"
                                />
-                        
-                        <Label Text="2022"
+                        <Button ImageSource="github.png" 
+                                Clicked="Button_Clicked"
+                                ClassId="https://github.com/nielvadev"/>
+                        <Button ImageSource="linkedin.png" 
+                                Clicked="Button_Clicked_1"
+                                ClassId="https://www.linkedin.com/in/juan-daniel-valencia-nielvadev/"/>
+                        <Label Text="2022" HorizontalTextAlignment="End" Margin="0,20,0,0"
                                />
                         
                     </StackLayout>
