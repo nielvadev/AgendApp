@@ -9,8 +9,8 @@
 
             <StackLayout>
                 <Grid Padding="0,0,0,30">
-                    <Image Source="task24.png" Margin="0,20,240,0" Scale="0.8"></Image>
-                    <Label Text="P E N D I E N T E S"
+                    <Image Source="task24.png" Margin="0,20,180,0" Scale="0.8"></Image>
+                    <Label Text="T A R E A S"
                     VerticalOptions="Start" 
                     FontSize="25"
                     TextColor="#0efaea"

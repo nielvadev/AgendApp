@@ -9,7 +9,7 @@
             <StackLayout>
             
             <Grid Padding="0,0,0,30">
-                <Image Source="menu.png" Margin="0,30,130,0" Scale="0.8"></Image>
+                <Image Source="menu.png" Margin="0,30,120,0" Scale="0.8"></Image>
                 <Label  Text="M E N Ú"
                             VerticalOptions="Start" 
                             FontSize="25"
@@ -17,7 +17,7 @@
                             HorizontalOptions="CenterAndExpand" Margin="70,38,0,0" 
                     />
             </Grid>
-            <Label Text="═╬══════════════════════════════════╬═" 
+            <Label Text="═╬════════════════════════════════╬═" 
                        HorizontalOptions="CenterAndExpand" 
                        Margin="0,-25,0,0" 
                        TextColor="#0EFAEA" >
@@ -27,11 +27,27 @@
             <StackLayout VerticalOptions="CenterAndExpand">
 
                 <Button
+                    Text="T A R E A S"
+                    TextColor="#0D1930"
+                    VerticalOptions="Center"
+                    FontSize="20"
+                    Command="{Binding irTareasCommand}">
+                </Button>
+                
+                <Button
                     Text="P E N D I E N T E S"
                     TextColor="#0D1930"
                     VerticalOptions="Center"
                     FontSize="20"
                     Command="{Binding irPendientesCommand}">
+                </Button>
+                
+                <Button
+                    Text="C O M P L E T A D A S"
+                    TextColor="#0D1930"
+                    VerticalOptions="Center"
+                    FontSize="20"
+                    Command="{Binding irCompletadasCommand}">
                 </Button>
 
                 <Button
@@ -40,6 +56,15 @@
                     VerticalOptions="Center"
                     FontSize="20"
                     Command="{Binding logOutCommand}">
+
+                </Button>
+                
+                <Button
+                    Text="A C E R C A   D E"
+                    TextColor="#0D1930"
+                    VerticalOptions="Center"
+                    FontSize="20"
+                    Command="{Binding aboutCommand}">
 
                 </Button>
 

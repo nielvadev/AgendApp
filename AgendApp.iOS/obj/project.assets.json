@@ -450,8 +450,8 @@
         "dependencies": {
           "EntityFramework": "6.4.4",
           "Rg.Plugins.Popup": "2.1.0",
-          "Xamarin.Essentials": "1.7.0",
-          "Xamarin.Forms": "5.0.0.2196",
+          "Xamarin.Essentials": "1.7.3",
+          "Xamarin.Forms": "5.0.0.2515",
           "sqlite-net-pcl": "1.8.116"
         },
         "compile": {
@@ -887,8 +887,8 @@
         "dependencies": {
           "EntityFramework": "6.4.4",
           "Rg.Plugins.Popup": "2.1.0",
-          "Xamarin.Essentials": "1.7.0",
-          "Xamarin.Forms": "5.0.0.2196",
+          "Xamarin.Essentials": "1.7.3",
+          "Xamarin.Forms": "5.0.0.2515",
           "sqlite-net-pcl": "1.8.116"
         },
         "compile": {
@@ -1326,8 +1326,8 @@
         "dependencies": {
           "EntityFramework": "6.4.4",
           "Rg.Plugins.Popup": "2.1.0",
-          "Xamarin.Essentials": "1.7.0",
-          "Xamarin.Forms": "5.0.0.2196",
+          "Xamarin.Essentials": "1.7.3",
+          "Xamarin.Forms": "5.0.0.2515",
           "sqlite-net-pcl": "1.8.116"
         },
         "compile": {
@@ -1765,8 +1765,8 @@
         "dependencies": {
           "EntityFramework": "6.4.4",
           "Rg.Plugins.Popup": "2.1.0",
-          "Xamarin.Essentials": "1.7.0",
-          "Xamarin.Forms": "5.0.0.2196",
+          "Xamarin.Essentials": "1.7.3",
+          "Xamarin.Forms": "5.0.0.2515",
           "sqlite-net-pcl": "1.8.116"
         },
         "compile": {
@@ -2748,24 +2748,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Juan Daniel\\.nuget\\packages\\": {},
+    "C:\\Users\\danie\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Juan Daniel\\source\\repos\\AgendApp\\AgendApp.iOS\\AgendApp.iOS.csproj",
+      "projectUniqueName": "C:\\Users\\danie\\OneDrive\\Documents\\GitHub\\AgendApp\\AgendApp\\AgendApp.iOS\\AgendApp.iOS.csproj",
       "projectName": "AgendApp.iOS",
-      "projectPath": "C:\\Users\\Juan Daniel\\source\\repos\\AgendApp\\AgendApp.iOS\\AgendApp.iOS.csproj",
-      "packagesPath": "C:\\Users\\Juan Daniel\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Juan Daniel\\source\\repos\\AgendApp\\AgendApp.iOS\\obj\\",
+      "projectPath": "C:\\Users\\danie\\OneDrive\\Documents\\GitHub\\AgendApp\\AgendApp\\AgendApp.iOS\\AgendApp.iOS.csproj",
+      "packagesPath": "C:\\Users\\danie\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\danie\\OneDrive\\Documents\\GitHub\\AgendApp\\AgendApp\\AgendApp.iOS\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Juan Daniel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\danie\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -2779,8 +2779,8 @@
       "frameworks": {
         "xamarinios10": {
           "projectReferences": {
-            "C:\\Users\\Juan Daniel\\source\\repos\\AgendApp\\AgendApp\\AgendApp.csproj": {
-              "projectPath": "C:\\Users\\Juan Daniel\\source\\repos\\AgendApp\\AgendApp\\AgendApp.csproj"
+            "C:\\Users\\danie\\OneDrive\\Documents\\GitHub\\AgendApp\\AgendApp\\AgendApp\\AgendApp.csproj": {
+              "projectPath": "C:\\Users\\danie\\OneDrive\\Documents\\GitHub\\AgendApp\\AgendApp\\AgendApp\\AgendApp.csproj"
             }
           }
         }
@@ -2823,5 +2823,33 @@
         "#import": []
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1605",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Degradación del paquete detectada: Xamarin.Essentials de 1.7.3 a 1.7.0. Haga referencia al paquete directamente desde el proyecto para seleccionar una versión diferente. \r\n AgendApp.iOS -> AgendApp -> Xamarin.Essentials (>= 1.7.3) \r\n AgendApp.iOS -> Xamarin.Essentials (>= 1.7.0)",
+      "libraryId": "Xamarin.Essentials",
+      "targetGraphs": [
+        "Xamarin.iOS,Version=v1.0",
+        "Xamarin.iOS,Version=v1.0/win",
+        "Xamarin.iOS,Version=v1.0/win-x64",
+        "Xamarin.iOS,Version=v1.0/win-x86"
+      ]
+    },
+    {
+      "code": "NU1605",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Degradación del paquete detectada: Xamarin.Forms de 5.0.0.2515 a 5.0.0.2196. Haga referencia al paquete directamente desde el proyecto para seleccionar una versión diferente. \r\n AgendApp.iOS -> AgendApp -> Xamarin.Forms (>= 5.0.0.2515) \r\n AgendApp.iOS -> Xamarin.Forms (>= 5.0.0.2196)",
+      "libraryId": "Xamarin.Forms",
+      "targetGraphs": [
+        "Xamarin.iOS,Version=v1.0",
+        "Xamarin.iOS,Version=v1.0/win",
+        "Xamarin.iOS,Version=v1.0/win-x64",
+        "Xamarin.iOS,Version=v1.0/win-x86"
+      ]
+    }
+  ]
 }

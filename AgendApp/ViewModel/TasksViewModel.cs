@@ -93,9 +93,6 @@ namespace AgendApp.ViewModel
         #region PROCESOS
         public void GetTasks()
         {
-
-
-            
             var tasks = App.Database.GetTaskAsync().Result;
             
             if (tasks == null)
