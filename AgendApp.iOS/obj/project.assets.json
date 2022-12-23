@@ -2748,24 +2748,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\danie\\.nuget\\packages\\": {},
+    "C:\\Users\\Juan Daniel\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\danie\\OneDrive\\Documents\\GitHub\\AgendApp\\AgendApp\\AgendApp.iOS\\AgendApp.iOS.csproj",
+      "projectUniqueName": "C:\\Users\\Juan Daniel\\source\\repos\\Xamarin\\AgendApp.iOS\\AgendApp.iOS.csproj",
       "projectName": "AgendApp.iOS",
-      "projectPath": "C:\\Users\\danie\\OneDrive\\Documents\\GitHub\\AgendApp\\AgendApp\\AgendApp.iOS\\AgendApp.iOS.csproj",
-      "packagesPath": "C:\\Users\\danie\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\danie\\OneDrive\\Documents\\GitHub\\AgendApp\\AgendApp\\AgendApp.iOS\\obj\\",
+      "projectPath": "C:\\Users\\Juan Daniel\\source\\repos\\Xamarin\\AgendApp.iOS\\AgendApp.iOS.csproj",
+      "packagesPath": "C:\\Users\\Juan Daniel\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Juan Daniel\\source\\repos\\Xamarin\\AgendApp.iOS\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\danie\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Juan Daniel\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -2779,8 +2779,8 @@
       "frameworks": {
         "xamarinios10": {
           "projectReferences": {
-            "C:\\Users\\danie\\OneDrive\\Documents\\GitHub\\AgendApp\\AgendApp\\AgendApp\\AgendApp.csproj": {
-              "projectPath": "C:\\Users\\danie\\OneDrive\\Documents\\GitHub\\AgendApp\\AgendApp\\AgendApp\\AgendApp.csproj"
+            "C:\\Users\\Juan Daniel\\source\\repos\\Xamarin\\AgendApp\\AgendApp.csproj": {
+              "projectPath": "C:\\Users\\Juan Daniel\\source\\repos\\Xamarin\\AgendApp\\AgendApp.csproj"
             }
           }
         }
